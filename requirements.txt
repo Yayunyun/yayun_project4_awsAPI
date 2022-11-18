@@ -5,3 +5,5 @@ ipython
 numpy
 pandas
 black
+flask
+awscli
