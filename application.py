@@ -6,7 +6,7 @@ app = application
 
 @app.route("/")  # at the end point /
 def hello():  # call method hello
-    return "Hello IDS706!"  # which returns "hello world"
+    return "Hello MIDS!"  # which returns "hello world"
 
 
 # if __name__ == "__main__":        # on running python app.py
