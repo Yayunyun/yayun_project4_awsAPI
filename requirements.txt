@@ -7,6 +7,6 @@ pandas
 black
 flask
 awscli
-decouple
-os
-dotenv
+python-decouple
+# dotenv
+boto3
