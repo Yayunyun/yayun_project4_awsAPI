@@ -12,7 +12,8 @@ def hello():  # call method hello
 
 @app.route("/get-items")
 def get_items():
-    return jsonify(aws_controller.get_items())
+    response = aws_controller.get_items()
+    return response['Items']
 
 
 @app.route("/add-item/<string:id>/")
