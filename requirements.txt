@@ -7,3 +7,6 @@ pandas
 black
 flask
 awscli
+decouple
+os
+dotenv
