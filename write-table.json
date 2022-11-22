@@ -1,0 +1,85 @@
+{
+    "customer_table": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "customer_id": {
+                        "S": "MIDS002"
+                    },
+                    "first_name": {
+                        "S": "Emma"
+                    },
+                    "last_name": {
+                        "S": "Wang"
+                    },
+                    "birthdate": {
+                        "S": "20000707"
+                    },
+                    "gender": {
+                        "S": "female"
+                    },
+                    "mobile": {
+                        "S": "9103008000"
+                    },
+                    "email": {
+                        "S": "emmawang@gmail.com"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "customer_id": {
+                        "S": "MIDS003"
+                    },
+                    "first_name": {
+                        "S": "Chloe"
+                    },
+                    "last_name": {
+                        "S": "Liu"
+                    },
+                    "birthdate": {
+                        "S": "20000903"
+                    },
+                    "gender": {
+                        "S": "female"
+                    },
+                    "mobile": {
+                        "S": "9000306700"
+                    },
+                    "email": {
+                        "S": "chloeliu@gmail.com"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "customer_id": {
+                        "S": "MIDS004"
+                    },
+                    "first_name": {
+                        "S": "Xiaoquan"
+                    },
+                    "last_name": {
+                        "S": "Liu"
+                    },
+                    "birthdate": {
+                        "S": "20001025"
+                    },
+                    "gender": {
+                        "S": "female"
+                    },
+                    "mobile": {
+                        "S": "9199899000"
+                    },
+                    "email": {
+                        "S": "xiaoquanliu@gmail.com"
+                    }
+                }
+            }
+        }
+    ]
+}
