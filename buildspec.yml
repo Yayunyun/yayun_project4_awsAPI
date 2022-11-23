@@ -1,8 +1,8 @@
 version: 0.2
 env:
   secrets-manager:
-    AWS_ACCESS_KEY_ID: IAM-access:AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY: IAM-access:AWS_SECRET_ACCESS_KEY 
+    AWS_ACCESS_KEY_ID: /CodeBuild/IAM-access:AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: /CodeBuild/IAM-access:AWS_SECRET_ACCESS_KEY 
 phases:
   build:
     commands:
