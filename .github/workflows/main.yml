@@ -9,10 +9,6 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: set up env variables
-      env:
-        AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
-        AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
     - name: Install dependencies
       run: |
         make install
@@ -20,6 +16,9 @@ jobs:
       run: |
         make lint
     - name: Test with pytest
+      env: |
+        AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
+        AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
       run: |
         make test
     - name: Format code
