@@ -7,3 +7,6 @@ phases:
   build:
     commands:
        - make all
+artifacts:
+  files:
+    - '**/*'
