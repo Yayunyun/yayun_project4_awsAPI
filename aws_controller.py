@@ -4,8 +4,8 @@ import os
 # AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
 # AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
 # REGION_NAME = config("REGION_NAME")
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
+AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
 REGION_NAME = "us-east-1"
 
 dynamo_client = boto3.client(
