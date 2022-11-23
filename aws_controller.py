@@ -30,10 +30,10 @@ def get_items():
 
 
 # first_name, last_name, gender, birthdate, email
-def insert_item(id):  # first_name, last_name, gender, birthdate, mobile, email):
+def insert_item(id_insert):  # first_name, last_name, gender, birthdate, mobile, email):
     response = CustomerTable.put_item(
         Item={
-            "customer_id": id,
+            "customer_id": id_insert,
             # "first_name": first_name,
             # "last_name": last_name,
             # "gender": gender,
@@ -45,9 +45,9 @@ def insert_item(id):  # first_name, last_name, gender, birthdate, mobile, email)
     return response
 
 
-def get_itemfrom_id(id):
+def get_itemfrom_id(id_get):
     response = CustomerTable.get_item(
-        Key={"customer_id": id},
+        Key={"customer_id": id_get},
         AttributesToGet=[
             "first_name",
             "last_name",
@@ -60,6 +60,6 @@ def get_itemfrom_id(id):
     return response
 
 
-def delete_item(id):
-    response = CustomerTable.delete_item(Key={"customer_id": id})
+def delete_item(id_delete):
+    response = CustomerTable.delete_item(Key={"customer_id": id_delete})
     return response

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, render_template
 import aws_controller
 
 application = Flask(__name__)  # create an app instance
@@ -16,16 +16,16 @@ def get_items():
     return response['Items']
 
 
-@app.route("/add-item/<string:id>/")
-def add_item(id):
+@app.route("/add-item/<string:id_add>/")
+def add_item(id_add):
     # check if the id already exist
-    response_check = aws_controller.get_itemfrom_id(id)
+    response_check = aws_controller.get_itemfrom_id(id_add)
     if response_check["ResponseMetadata"]["HTTPStatusCode"] == 200:
         if "Item" in response_check:
-            return f"This customer already existx", {"Item": response_check["Item"]}
+            return "This customer already existx", {"Item": response_check["Item"]}
 
     # If the customer does not exist, add new customer information
-    response = aws_controller.insert_item(id)
+    response = aws_controller.insert_item(id_add)
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
         return {
             "msg": "Added successfully",
@@ -33,9 +33,9 @@ def add_item(id):
     return {"msg": "Some error occcured", "response": response}
 
 
-@app.route("/read-item/<string:id>")
-def read_item(id):
-    response = aws_controller.get_itemfrom_id(id)
+@app.route("/read-item/<string:id_read>")
+def read_item(id_read):
+    response = aws_controller.get_itemfrom_id(id_read)
 
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
 
@@ -48,8 +48,8 @@ def read_item(id):
 
 
 @app.route("/delete-item/<string:id>")
-def delete_item(id):
-    response = aws_controller.delete_item(id)
+def delete_item(id_delete):
+    response = aws_controller.delete_item(id_delete)
 
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
         return {
