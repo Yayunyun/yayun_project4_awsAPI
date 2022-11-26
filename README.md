@@ -6,7 +6,8 @@ This is yayun's repo for IDS706 project 4.
 
 
 ## API guide 
-![This web app is host on AWS elastic beanstalk.] (http://Flaskdynamodbcustomer-env.eba-j26eetip.us-east-1.elasticbeanstalk.com)
+![This web app is host on AWS elastic beanstalk.] (http://Flaskdynamodbcustomer-env.eba-j26eetip.us-east-1.elasticbeanstalk.com). 
+
 Add the following term to the url to get, insert, and delete items from a dynamo db database. 
 #### Get all customers information
 ```/get-items```
