@@ -47,7 +47,7 @@ def read_item(id_read):
     return {"msg": "Some error occured", "response": response}
 
 
-@app.route("/delete-item/<string:id>")
+@app.route("/delete-item/<string:id_delete>")
 def delete_item(id_delete):
     response = aws_controller.delete_item(id_delete)
 
