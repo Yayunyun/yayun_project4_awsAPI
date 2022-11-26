@@ -15,4 +15,4 @@ Add the following term to the url to get, insert, and delete items from a dynamo
 #### Insert customers information
 ```/add-items/{customer id}/{customer first name}/customer last name}```
 ### Delete customer information
-```/delete-item/{customer id}
+```/delete-item/{customer id}```
